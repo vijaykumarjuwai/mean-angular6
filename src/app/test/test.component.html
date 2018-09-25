@@ -1,0 +1,9 @@
+<div *ngFor="let test of tests">
+	{{ test.satTest.name }}
+	<div *ngFor="let testInstance of test.satTest.testInstance">
+		{{ testInstance.name }}
+		<div *ngFor="let question of testInstance.questions; let i = index">
+			{{ i + 1 }} : {{ question.answer }}
+		</div>
+	</div>
+</div>
